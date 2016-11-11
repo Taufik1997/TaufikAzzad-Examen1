@@ -16,6 +16,7 @@ public:
 	void moverPieza(int,int,int,int,string);
 	void imprimirTablero();
 	void deleteTablero();
+	void validacionGanador();
 
 
 };
