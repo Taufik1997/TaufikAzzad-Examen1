@@ -17,6 +17,7 @@ int main(){
 			jugador = "Jugador 2";
 		}
 		int i1,j1,i2,j2;
+		cout<<jugador;
 		cout<<endl<<"Ingrese la posicion que desea mover[i]:";
 		cin>>i1;
 		cout<<endl<<"Ingrese la posicion que desea mover[j]:";
@@ -27,7 +28,7 @@ int main(){
 		cin>>j2;
 		metodos->moverPieza(i1,j1,i2,j2,jugador);
 		metodos->imprimirTablero();
-		
+
 		contador++;
 
 	}while(true);
