@@ -70,42 +70,42 @@ void Metodos::moverPieza(int i1,int j1,int i2,int j2,string jugador){
 		pieza = '#';
 		comer = '+';
 	}
-	if(this->tablero[i1][j2] == pieza && this->tablero[i2][j2] != comer){
-		if(i2 == i1+1 && j2==j1||i2 == i1-1 && j2==j1||i2 == i1+2 && j2==j1||i2 == i1-1 && j2==j1||i2 == i1 && j2==j1+1||i2 == i1 && j2==j1+2||
-			i2 == i1 && j2==j1-1||i2 == i1 && j2==j1-2||i2 == i1+1 && j2==j1-1||i2 == i1+2 && j2==j1-2||i2 == i1+1 && j2==j1+1||i2 == i1+2 && j2==j1+2||
-			i2-1 == i1 && j2==j1+1||i2-2 == i1 && j2==j1+2||i2 == i1-1 && j2==j1-1||i2 == i1-2 && j2==j1-2){
-			tablero[i2][j2] = pieza;
+	if(i2>=0||i2<11 && j2>=0||j2<11){
+		if(this->tablero[i1][j2] == pieza && this->tablero[i2][j2] != comer){
+			if(i2 == i1+1 && j2==j1||i2 == i1-1 && j2==j1||i2 == i1+2 && j2==j1||i2 == i1-1 && j2==j1||i2 == i1 && j2==j1+1||i2 == i1 && j2==j1+2||
+				i2 == i1 && j2==j1-1||i2 == i1 && j2==j1-2||i2 == i1+1 && j2==j1-1||i2 == i1+2 && j2==j1-2||i2 == i1+1 && j2==j1+1||i2 == i1+2 && j2==j1+2||
+				i2-1 == i1 && j2==j1+1||i2-2 == i1 && j2==j1+2||i2 == i1-1 && j2==j1-1||i2 == i1-2 && j2==j1-2){
+				tablero[i2][j2] = pieza;
+			}
+			
+			if(this->tablero[i2+1][j2] == comer){
+				this->tablero[i2+1][j2] = pieza;
+			}
+			if(this->tablero[i2-1][j2] == comer){
+				this->tablero[i2-1][j2] = pieza;
+			}
+			if(this->tablero[i2][j2+1] == comer){
+				this->tablero[i2][j2+1]= pieza;
+			}
+			if(this->tablero[i2][j2-1] == comer){
+				this->tablero[i2][j2-1] = pieza;
+			}
+			if(this->tablero[i2][j2+1] == comer){
+				this->tablero[i2][j2+1]=pieza;
+			}
+			if(this->tablero[i2+1][j2+1] == comer){
+				this->tablero[i2+1][j2+1] = pieza;
+			}
+			if(this->tablero[i2+1][j2-1] == comer){
+				this->tablero[i2+1][j2-1]=pieza;
+			}
+			if(this->tablero[i2+1][j2-1] == comer){
+				this->tablero[i2+1][j2-1]=pieza;
+			}
+			if(this->tablero[i2+1][j2+1] == comer){
+				this->tablero[i2+1][j2+1]=pieza;
+			}
 		}
-		
-		if(this->tablero[i2+1][j2] == comer){
-			this->tablero[i2+1][j2] = pieza;
-		}
-		if(this->tablero[i2-1][j2] == comer){
-			this->tablero[i2-1][j2] = pieza;
-		}
-		if(this->tablero[i2][j2+1] == comer){
-			this->tablero[i2][j2+1]= pieza;
-		}
-		if(this->tablero[i2][j2-1] == comer){
-			this->tablero[i2][j2-1] = pieza;
-		}
-		if(this->tablero[i2][j2+1] == comer){
-			this->tablero[i2][j2+1]=pieza;
-		}
-		if(this->tablero[i2+1][j2+1] == comer){
-			this->tablero[i2+1][j2+1] = pieza;
-		}
-		if(this->tablero[i2+1][j2-1] == comer){
-			this->tablero[i2+1][j2-1]=pieza;
-		}
-		if(this->tablero[i2+1][j2-1] == comer){
-			this->tablero[i2+1][j2-1]=pieza;
-		}
-		if(this->tablero[i2+1][j2+1] == comer){
-			this->tablero[i2+1][j2+1]=pieza;
-		}
-
-
 	}else{
 		cout<<"Las cordinados que ingreso no existe ninguna pieza o no puede moverse ahi porque existe una pieza del contrincante";
 	}

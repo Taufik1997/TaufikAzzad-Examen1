@@ -14,8 +14,6 @@ public:
 	void llenarTablero2();
 	void llenarTablero3();
 	void moverPieza(int,int,int,int,string);
-
-
 	void imprimirTablero();
 	void deleteTablero();
 

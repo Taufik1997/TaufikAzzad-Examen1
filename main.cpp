@@ -25,16 +25,11 @@ int main(){
 		cin>>i2;
 		cout<<endl<<"Ingrese la posicion a donde lo desea mover[j]:";
 		cin>>j2;
-
-
-
-
-
-
-
-
+		metodos->moverPieza(i1,j1,i2,j2,jugador);
 		metodos->imprimirTablero();
+		
 		contador++;
+
 	}while(true);
 	metodos->deleteTablero();
 	return 0;
