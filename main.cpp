@@ -28,7 +28,7 @@ int main(){
 		cin>>j2;
 		metodos->moverPieza(i1,j1,i2,j2,jugador);
 		metodos->imprimirTablero();
-
+		metodos-> validacionGanador();
 		contador++;
 
 	}while(true);

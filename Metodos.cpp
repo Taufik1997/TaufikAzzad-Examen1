@@ -162,3 +162,60 @@ void Metodos::deleteTablero(){
 	this ->tablero=NULL;
 }
 
+void Metodos::validacionGanador(){
+	bool existe1 = false,existe2 = false;
+	for (int i = 0; i < 11; ++i)
+	{
+		for (int j = 0; j < 11; ++j)
+		{
+			if(this->tablero[i][j] == '#'){
+				existe1= true;
+			}
+			if(this->tablero[i][j] == '+'){
+				existe2 = true;
+			}
+		}
+	}
+	if(existe1 == false){
+		cout<<"Gana el Jugador 1";
+	}
+	if(existe2 == false){
+		cout<<"Gana el Jugador 2";
+	}
+	bool existe3 = false;
+	for (int i = 0; i < 11; ++i)
+	{
+		for (int j = 0;j < 11; ++j)
+		{
+			if(this->tablero[i][j]=='-'){
+				existe3= true;
+			}
+		}
+	}
+	int hashtangs = 0, mas = 0;
+	if(existe3 == false){
+		for (int i = 0; i < 11; ++i)
+		{
+			for (int j = 0; j < 11; ++j)
+			{
+				if(this->tablero[i][j] == '#'){
+					hashtangs++;
+				}
+				if(this->tablero[i][j] == '+'){
+					mas++;
+				}
+			}
+		}
+		if(mas<hashtangs){
+			cout<<"Gana el Jugador 2";
+		}
+		if(mas>hashtangs){
+			cout<<"Gana el Jugador 1";
+		}
+		if(mas==hashtangs){
+			cout<<"Es un empate!";
+		}
+	}
+
+
+}
